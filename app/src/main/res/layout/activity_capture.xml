@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical" android:layout_width="match_parent"
+    android:layout_height="match_parent" android:padding="16dp" android:weightSum="10"
+    >
+
+    <ImageView
+        android:id="@+id/captureView"
+        android:layout_width="match_parent"
+        android:layout_height="555dp"
+        android:layout_weight="9" />
+
+    <Button
+        android:id="@+id/buttonCapture"
+        android:layout_weight="1"
+        android:layout_height="wrap_content"
+        android:layout_width="match_parent"
+        android:background="@android:color/holo_red_dark"
+        android:textColor="@android:color/white"
+        android:text="capture"
+        />
+
+
+
+</LinearLayout>
