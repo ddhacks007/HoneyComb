@@ -30,6 +30,7 @@ import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.List;
 import com.example.honeycomb.ImageCapturing;
+import com.example.honeycomb.MyAdapter;
 
 
 public class MainActivity extends AppCompatActivity  {
