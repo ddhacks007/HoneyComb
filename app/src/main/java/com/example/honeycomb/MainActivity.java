@@ -37,9 +37,9 @@ public class MainActivity extends AppCompatActivity  {
 
     private ListView displayStack;
     private String[] displayStackArray;
-    private String[] displayDiscriptionStack;
+    private String[] displayDiscription;
     private MyAdapter myAdapter;
-    private int[] displayPicturesStack;
+    private int[] displayPictures;
 
     public MyAdapter getMyAdapter() {
         return myAdapter;
@@ -50,12 +50,12 @@ public class MainActivity extends AppCompatActivity  {
     }
 
 
-    public int[] getDisplayPicturesStack() {
-        return displayPicturesStack;
+    public int[] getDisplayPictures() {
+        return displayPictures;
     }
 
-    public void setDisplayPicturesStack(int[] displayPicturesStack) {
-        this.displayPicturesStack = displayPicturesStack;
+    public void setDisplayPictures(int[] displayPictures) {
+        this.displayPictures = displayPictures;
     }
 
     public ListView getDisplayStack() {
@@ -74,12 +74,12 @@ public class MainActivity extends AppCompatActivity  {
         this.displayStackArray = displayStackArray;
     }
 
-    public String[] getDisplayDiscriptionStackArray() {
-        return displayDiscriptionStack;
+    public String[] getDisplayDiscription() {
+        return displayDiscription;
     }
 
-    public void setDisplayDiscriptionStackArray(String[] displayDiscriptionStackArray) {
-        this.displayDiscriptionStack = displayDiscriptionStackArray;
+    public void setDisplayDiscription(String[] displayDiscription) {
+        this.displayDiscription = displayDiscription;
     }
     public void capturePhoto(){
         Intent intent = new Intent(this, ImageCapturing.class);
@@ -94,10 +94,10 @@ public class MainActivity extends AppCompatActivity  {
         super.onCreate(savedInstanceState);
         this.setContentView(R.layout.activity_main);
         this.setDisplayStackArray(new String[]{"Data transfer", "Freeze", "where are you", "Generate pdf"});
-        this.setDisplayDiscriptionStackArray(new String[]{"want to transfer messages using our bluetooth!", "want to freeze this movement?", "want to know the place you are in?", "want to generate pdf?"});
-        this.setDisplayPicturesStack(new int[]{R.drawable.bluetooth, R.drawable.freeze, R.drawable.loc, R.drawable.pdf});
+        this.setDisplayDiscription(new String[]{"want to transfer messages using our bluetooth!", "want to freeze this movement?", "want to know the place you are in?", "want to generate pdf?"});
+        this.setDisplayPictures(new int[]{R.drawable.bluetooth, R.drawable.freeze, R.drawable.loc, R.drawable.pdf});
         this.setDisplayStack((ListView)findViewById(R.id.select_operations));
-        this.setMyAdapter(this.getDisplayStackArray(), this.getDisplayDiscriptionStackArray(), this.getDisplayPicturesStack());
+        this.setMyAdapter(this.getDisplayStackArray(), this.getDisplayDiscription(), this.getDisplayPictures());
         displayStack.setAdapter(this.getMyAdapter());
 
             displayStack.setOnItemClickListener(new AdapterView.OnItemClickListener() {
